@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gender & Age Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, #1a1a40, #2d2d70, #1a1a40);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 20px;
+            text-shadow: 0 0 10px #00ffd0, 0 0 20px #00ffd0;
+        }
+
+        .video-container {
+            border: 5px solid #00ffd0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 20px #00ffd0;
+            margin-top: 20px;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 10px;
+            font-size: 0.9rem;
+            color: #aaaaaa;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .video-container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🤖 Real-Time Gender & Age Detection</h1>
+    <div class="video-container">
+        <img src="{{ url_for('video_feed') }}" width="100%" />
+    </div>
+    <div class="footer">Created with ❤️ using OpenCV, Flask, and your voice</div>
+</body>
+</html>
